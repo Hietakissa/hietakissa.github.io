@@ -1,3 +1,72 @@
+:root {
+    --bg: rgb(17, 17, 17);
+    --text: white;
+    --text-muted: rgb(206, 206, 206);
+    --accent: #df1335;
+    --radius: 12px;
+}
+
+@font-face {
+    font-family: "SansFlex";
+    src: url(fonts/GoogleSansFlex.ttf) format(truetype);
+    font-weight: 500;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: SansFlex, system-ui, -apple-system, sans-serif;
+    margin: 0;
+    color: var(--text);
+}
+
+a {
+    transition: text-shadow 0.15s;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 1px 1px var(--accent);
+}
+
+
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header nav a {
+    color: var(--text-muted)
+}
+.header nav a:hover {
+    color: var(--text)
+}
+
+
+.wordmark {
+    
+}
+
+.wordmark span {
+    color: var(--accent);
+}
+
+
+
+
 .project-grid{
     background: rgb(4, 2, 7);
     display: grid;
@@ -17,9 +86,8 @@
 }
 
 .project-card:hover{
-    transform: scale(1.05);
+    
 }
-
 
 .project-card h3,
 .project-card p {
@@ -29,8 +97,6 @@
 
 .thumbnail{
     border-radius: 8px;
-    /*width: 100%;*/
-    /*height: 70%;*/
 }
 
 .project-link{
@@ -42,21 +108,4 @@
 .project-link:hover{
     color:rgb(255, 135, 135);
     background-color: purple;
-}
-
-
-.capsule{
-    display: inline-block;
-    transition: border-color 0.1s, transform 0.1s;
-    background-color: rgba(0, 0, 0, 0.733);
-    color: bisque;
-    padding: 6px;
-    border-radius: 14px;
-    border-width: 2px;
-    border-style: outset;
-}
-
-.capsule:hover{
-    border-color: rgb(230, 49, 49);
-    transform: scale(1.05);
 }
