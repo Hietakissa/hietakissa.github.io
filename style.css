@@ -1,9 +1,10 @@
 :root {
     --bg: rgb(17, 17, 17);
-    --surface: rgb(44, 44, 44);
+    --surface: rgb(29, 29, 29);
     --text: white;
     --text-muted: rgb(206, 206, 206);
     --accent: #df1335;
+    --accent-secondary: #e7dee0;
     --border: #df1335;
     --radius: 12px;
 }
@@ -76,7 +77,12 @@ a:hover {
 
 
 .hero {
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero a {
@@ -86,13 +92,24 @@ a:hover {
     color: var(--text);
 }
 
+.hero .hero-wordmark {
+    font-size: 50px;
+    margin: 8px;
+}
+
 .hero .social-links {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    width: max-content;
+    gap: 8px;
+    font-size: 20px;
+}
+.hero .social-links span {
+    color: var(--accent-secondary);
 }
 
 .hero .hero-description {
+    font-size: 18px;
     max-width: 60%;
 }
 
