@@ -6,6 +6,7 @@ const dialog = document.querySelector("#project-dialog");
 const dialogContent = document.querySelector("#dialog-content");
 const dialogTitle = document.querySelector("#project-dialog-title");
 const list = document.querySelector("#project-list");
+const cursor = document.querySelector("#custom-cursor");
 
 
 // Project card click
@@ -21,6 +22,7 @@ list.addEventListener("click", event => {
   dialogTitle.innerHTML = project.title;
   dialogContent.innerHTML = renderDetail(project);
   dialog.showModal();
+  dialog.appendChild(cursor);
 });
 
 
@@ -33,6 +35,7 @@ dialog.addEventListener("click", event => {
   // Close when clicking the backdrop, not the dialog content.
   if (event.target === dialog) {
     dialog.close();
+    document.body.appendChild(cursor);
   }
 });
 

@@ -4,6 +4,7 @@
     --text: white;
     --text-muted: rgb(206, 206, 206);
     --accent: #df1335;
+    --accent-muted: #b30e2a;
     --accent-secondary: #e7dee0;
     --border: #df1335;
     --radius: 12px;
@@ -71,7 +72,8 @@ a:hover {
 .header nav a {
     color: var(--text-muted)
 }
-.header nav a:hover {
+.header nav a:hover,
+.header nav a:focus-visible {
     color: var(--text)
 }
 
@@ -88,7 +90,8 @@ a:hover {
 .hero a {
     color: var(--accent);
 }
-.hero a:hover {
+.hero a:hover,
+.hero a:focus-visible {
     color: var(--text);
 }
 
@@ -136,10 +139,9 @@ a:hover {
     padding: 0;
     font-family: inherit;
 }
-.project-card:hover {
-    transform: scale(1.02);
-}
+.project-card:hover,
 .project-card:focus-visible {
+    transform: scale(1.02);
     outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
@@ -232,7 +234,8 @@ a:hover {
     cursor: pointer;
     flex-shrink: 0;
 }
-.project-dialog .dialog-close:hover {
+.project-dialog .dialog-close:hover,
+.project-dialog .dialog-close:focus-visible {
     border-color: var(--border);
     color: var(--accent);
     transform: rotateZ(360deg)
