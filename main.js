@@ -90,10 +90,10 @@ function renderLinks(links = []) {
 		return `
         <a href="${url}"
             ${external ? 'target="_blank" rel="noreferrer"' : ""}>
-            ${link.label}↗
+            ${link.label}
         </a>
     `;
-	}).join("");
+	}).join("<span>|</span>");
 }
 
 

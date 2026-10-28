@@ -28,7 +28,7 @@ html {
 
 main {
     height: 100dvh;
-    padding: 20px
+    padding: 20px;
 }
 
 body {
@@ -70,17 +70,21 @@ a:hover {
 }
 
 .header nav a {
+    transition: outline-offset 0.1s;
     color: var(--text-muted)
 }
 .header nav a:hover,
 .header nav a:focus-visible {
-    color: var(--text)
+    color: var(--text);
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
 
 .hero {
     padding-top: 30px;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,11 +92,16 @@ a:hover {
 }
 
 .hero a {
+    transition: outline-offset 0.1s;
     color: var(--accent);
 }
 .hero a:hover,
 .hero a:focus-visible {
+    
     color: var(--text);
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
 .hero .hero-wordmark {
@@ -125,7 +134,7 @@ a:hover {
 }
 
 .project-card {
-    transition: transform 0.25s;
+    transition: transform 0.25s, outline-offset 0.1s;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -268,8 +277,24 @@ a:hover {
     margin: 0;
 }
 
-.project-dialog .detail-links {
+.project-dialog .detail-links
+ {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 8px;
+    width: fit-content;
+}
+.detail-links a{
+    color: var(--accent);
+}
+.detail-links a:hover,
+.detail-links a:focus-visible {
+    color: var(--text);
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;transition: outline-offset 0.1s;
+}
+
+.detail-links span{
+    color: var(--text);
 }
