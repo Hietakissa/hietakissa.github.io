@@ -109,18 +109,26 @@ function renderDetail(project){
         ${project.type} / ${project.year}
     </p>
     <p>${project.description}</p>
-    <div>
-        <h2>My contributions</h2>
-        <ul class="contribution">
-        ${project.contributions.map(item =>`<li>${item}</li>`).join("")}
-        </ul>
-    </div>
+    ${renderContributions(project)}
     
       ${project.links.length ? `
         <div class="detail-links">
           ${renderLinks(project.links)}
         </div>
       ` : ""}
+    `;
+}
+
+function renderContributions(project){
+    if (project.contributions == null || project.contributions.length == 0) return ``;
+    
+    return `
+    <div>
+        <h2>My contributions</h2>
+        <ul class="contribution">
+        ${project.contributions.map(item =>`<li>${item}</li>`).join("")}
+        </ul>
+    </div>
     `;
 }
 
