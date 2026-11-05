@@ -70,7 +70,7 @@ export const projects = [
     title: "Discord Chatbot",
     type: "Solo Project",
     year: "N/A",
-    short: "An LLM-powered locally run Discord chatbot",
+    short: "An LLM-powered, locally run Discord chatbot.",
     description:
       `Discord chatbot powered by a locally run LLM via llama.cpp. 
       I used the Microsoft Semantic Kernel and Discord.net packages 
@@ -78,8 +78,8 @@ export const projects = [
       to run the LLM in the same process, but abandoned that approach in favor of the performance of raw llama.cpp.
       The bot would decide itself whether it should respond to a message based on the context.
       <br><br>
-      I made it primarily as a learning project and also got started on a memory system, 
-      but didn't have time to finish it in favor of other projects.`,
+      I developed it primarily as a learning project and also got started on a memory system, 
+      but haven't have time to finish it in favor of other projects.`,
     tags: [".NET", "C#", "Ai"],
     thumbnail: "discord-logo.avif",
     links: []

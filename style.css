@@ -134,7 +134,7 @@ a:hover {
 }
 
 .project-card {
-    transition: transform 0.25s, outline-offset 0.1s;
+    transition: transform 0.25s, box-shadow 0.15s;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -153,8 +153,7 @@ a:hover {
 .project-card:hover,
 .project-card:focus-visible {
     transform: scale(1.02);
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
+    box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--accent);
 }
 
 .project-card h3{
